@@ -1,0 +1,15 @@
+var players = require('../db/players');
+
+exports.insert = function(req, res) {
+	var newPlayer = req.body; 
+	newPlayer.games = newPlayer.games || [];
+	players.insert(newPlayer, function(result) {
+		res.json(result.data);			
+	});
+};
+
+exports.findAll = function(req, res) {
+	players.findAll(function(result) {
+		res.json(result.data)
+	});	
+};
