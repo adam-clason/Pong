@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use(function(req, res) {
-    res.sendfile(__dirname, '/public/index.html');
+    res.sendfile(__dirname + '/public/index.html');
 });
 
 
