@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html ng-app="pongApp" lang="en">
 	<head>
 		<title>Pong</title>
 		<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"></link>		
@@ -6,22 +7,33 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-inverse navbar-fixed-top">
+		<nav class="navbar navbar-inverse">
 			<div class="navbar-iner">
 				<ul class="nav navbar-nav">
 					<li>
 						<a href="/leaderboard">Leadboard</a>						
 					</li>
+					<li>
+						<a href="/createPlayer">Create Player</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
 
-		<div ng-view></div>
+		<div class="container">
 
+			<div ng-view></div>
 
-		<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+		</div>
+
+		<!-- <script src="/lib/bootstrap/js/bootstrap.min.js"></script> -->
 		<script src="/lib/angular/angular.min.js"></script>
 		<script src="/lib/angular/angular-route.min.js"></script>
+		<script src="/lib/angular/angular-resource.min.js"></script>
+		<script src="/app/pongRouting.js"></script>
+		<script src="/app/services/pongResources.js"></script>
+		<script src="/app/app.js"></script>
+		<script src="/app/controllers/CreatePlayerController.js"></script>
 	</body>
 
 </html>

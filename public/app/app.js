@@ -1,0 +1,1 @@
+ angular.module('pongApp', ['pongRouting', 'pongResources']);
