@@ -1,0 +1,27 @@
+<div class="jumbotron text-center">
+	<h1>Leaderboard</h1>
+</div>
+
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Rank</th>
+				<th>Name</th>
+				<th>Win Count</th>
+				<th>Win Percentage</th>
+				<th>Last Game</th>			
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="player in leaderboard">
+				<td>{{$index}}</td>
+				<td>{{player.name}}</td>
+				<td>{{player.wins}}</td>
+				<td>{{ player.losses > 0 ? player.wins / player.losses : 100 }}</td>
+				<td>L v Andrew</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+

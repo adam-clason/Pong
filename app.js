@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var http = require('http');
 var mongoose = require('mongoose');
 var players = require('./api/players');
+var games = require('./api/games');
 var dbConfig = require('./db/config');
 
 var app = express();
@@ -26,6 +27,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/api/players', players.insert);
 app.get('/api/players', players.findAll);
+app.get('/api/games', games.findAll);
+app.post('/api/games', games.insert);
+
 
 app.use(function(req, res) {
     res.sendfile(__dirname + '/public/index.html');

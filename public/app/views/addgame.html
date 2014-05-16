@@ -1,0 +1,70 @@
+ <div class="container">
+
+ 	<form class="form-horizontal" ng-submit="save()">
+
+ 		<div ng-class="(result && result.success) ? 'alert alert-success' : 'alert alert-danger'" 
+				ng-hide="!result">
+	 			{{ result.message }}
+	 	</div>
+
+ 		<fieldset>
+
+ 			<legend>Who Played?</legend>
+
+ 			<div class="form-group">
+ 				<label for="player1" class="col-sm-1 control-label">Player 1</label>
+ 				<div class="col-sm-3">
+ 					<select id="player1" class="form-control"
+ 						ng-required="true"
+ 						ng-model="selectedPlayer1" 
+ 						ng-options="player.name for player in players">
+ 						<option value="">-- Select a Player --</option>
+ 					</select>
+ 				</div>
+			</div>
+			<div class="form-group">
+ 				<label for="player2" class="col-sm-1 control-label">Player 2</label>
+ 				<div class="col-sm-3">
+ 					<select id="player2" class="form-control"
+ 						ng-required="true"
+ 						ng-model="selectedPlayer2" 
+ 						ng-options="player.name for player in players">
+ 						<option value="">-- Select a Player --</option>
+ 					</select>
+ 				</div>
+ 			</div>
+ 			
+ 		</fieldset>
+
+
+ 		<div ng-hide="!selectedPlayer1.name || !selectedPlayer2.name">
+	 		<fieldset>
+	 			<legend>Enter Sets</legend>
+	 			
+	 			<div class="row">
+		 			<h5 class="col-sm-2 text-center">{{ selectedPlayer1.name }}'s Score</h5>
+		 			<h5 class="col-sm-2 text-center">{{ selectedPlayer2.name }}'s Score</h5>
+	 			</div>
+	 			<div class="form-group" ng-repeat="set in sets">
+	 				<span class="col-sm-2">
+	 					<input type="text" ng-model="set.score1" ng-required="true" class="form-control" />
+	 				</span>
+	 				<span class="col-sm-2">
+	 					<input type="text" ng-model="set.score2" ng-required="true" class="form-control" />
+	 				</span>
+	 				<a href="" ng-click="removeSet($index)" class="glyphicon glyphicon-remove-circle"></a>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-4">
+						<button class="btn" type="button" ng-click="addSet()">Add Set</button>
+						<button class="btn btn-success" type="submit">Save Game</button>
+					</div>
+				</div>
+
+		 	</fieldset>
+	 	</div>
+
+ 	</form>
+
+
+ </div>

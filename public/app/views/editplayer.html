@@ -1,31 +1,33 @@
- <form class="form-horizontal">
+<div class="container">
+	<form class="form-horizontal">
 
- 	<fieldset>
+	 	<fieldset>
 
- 		<legend>Create Player</legend>
+	 		<legend>Create Player</legend>
 
- 		<div ng-class="(result && result.success) ? 'alert alert-success' : 'alert alert-danger'" 
-			ng-hide="!(result || result.complete)">
- 			{{ result.message }}
- 		</div>
-
- 		<div class="form-group">
-	 		<label for="name" class="col-sm-2 control-label">Name</label>
-	 		<div class="col-sm-4">
-	 			<input type="text" 
-	 				ng-required 
-	 				ng-model="player.name" 
-	 				class="form-control" id="name" placeholder="Name"></input>
+	 		<div ng-class="(result && result.success) ? 'alert alert-success' : 'alert alert-danger'" 
+				ng-hide="!(result || result.complete)">
+	 			{{ result.message }}
 	 		</div>
- 		</div>
 
- 	</fieldset>
+	 		<div class="form-group">
+		 		<label for="name" class="col-sm-2 control-label">Name</label>
+		 		<div class="col-sm-4">
+		 			<input type="text" 
+		 				ng-required 
+		 				ng-model="player.name" 
+		 				class="form-control" id="name" placeholder="Name"></input>
+		 		</div>
+	 		</div>
 
- 	<div class="form-group">
- 		<div class="col-sm-offset-2 col-sm-4">
- 			<button ng-click="save(player)" 
- 					ng-disabld="form.$invalid || callInProcess" 
- 					class="btn btn-success" type="submit">Submit</button>
- 		</div>
- 	</div>
- </form>
+	 	</fieldset>
+
+	 	<div class="form-group">
+	 		<div class="col-sm-offset-2 col-sm-4">
+	 			<button ng-click="save(player)" 
+	 					ng-disabld="form.$invalid || callInProcess" 
+	 					class="btn btn-success" type="submit">Submit</button>
+	 		</div>
+	 	</div>
+	 </form>
+</div>

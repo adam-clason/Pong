@@ -1,1 +1,1 @@
-exports.connectionString =  'mongodb://localhost/pong';
+exports.connectionString = 'mongodb://localhost/pong';

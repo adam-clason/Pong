@@ -10,7 +10,8 @@
     "body-parser": "~1.0.0",
     "debug": "~0.7.4",
     "jade": "~1.3.0",
-    "mongoose": "^3.8.8"
+    "pg": "2.2.0",
+    "mongoose": "^3.8.9"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

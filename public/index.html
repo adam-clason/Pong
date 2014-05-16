@@ -14,19 +14,22 @@
 						<a href="/leaderboard">Leadboard</a>						
 					</li>
 					<li>
+						<a href="/addGame">Add Game</a>
+					</li>
+					<li>
 						<a href="/createPlayer">Create Player</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 
-		<div class="container">
+		<div ng-view></div>
 
-			<div ng-view></div>
 
-		</div>
 
-		<!-- <script src="/lib/bootstrap/js/bootstrap.min.js"></script> -->
+		<script src="/lib/plugins/jquery-2.1.1.min.js"></script>
+		<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/lib/plugins/bootstrap3-typeahead.min.js"></script>
 		<script src="/lib/angular/angular.min.js"></script>
 		<script src="/lib/angular/angular-route.min.js"></script>
 		<script src="/lib/angular/angular-resource.min.js"></script>
@@ -34,6 +37,8 @@
 		<script src="/app/services/pongResources.js"></script>
 		<script src="/app/app.js"></script>
 		<script src="/app/controllers/CreatePlayerController.js"></script>
+		<script src="/app/controllers/LeaderBoardController.js"></script>
+		<script src="/app/controllers/AddGameController.js"></script>
 	</body>
 
 </html>
